@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { format } from "timeago.js";
 import { useRouter } from "next/navigation";
 import Comment from "@/components/comment/Comment";
-import ice from "../../../../public/ice-cream.jpg";
+import ice from "../../../../../Blog/blog-app/public/ice-cream.jpg";
 
 const BlogDetails = (ctx) => {
   const [blogDetails, setBlogDetails] = useState("");

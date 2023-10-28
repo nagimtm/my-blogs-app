@@ -35,7 +35,6 @@ const Card = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => {
           setIsLiked((prev) => !prev);
           setBlogLikes((prev) => prev + 1);
         }
-        // mutate();
       }
     } catch (error) {
       console.log(error);

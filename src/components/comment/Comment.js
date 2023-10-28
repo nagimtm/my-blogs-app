@@ -1,20 +1,20 @@
 import React from "react";
 import { useSession } from "next-auth/react";
 import { format } from "timeago.js";
-import ice from "../../../public/ice-cream.jpg";
+import ice from "../../../../Blog/blog-app/public/ice-cream.jpg";
 import { BsTrash } from "react-icons/bs";
 import classes from "./comment.module.css";
 import Image from "next/image";
 
 const Comment = ({ comment, setComments }) => {
   const { data: session } = useSession();
-  const token = session?.user?.accessToken;
+  // const token = session?.user?.accessToken;
 
   const handleDeleteComment = async () => {
     try {
       await fetch(`/api/comment/${comment?._id}`, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${session?.user?.accessToken}`,
         },
         method: "DELETE",
       });
