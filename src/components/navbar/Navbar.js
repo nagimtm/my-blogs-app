@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classes from "./navbar.module.css";
-// import ice from "../../../public/ice-cream.jpg";
+import ice from "../../../../Blog/blog-app/public/ice-cream.jpg";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { signIn, signOut, useSession } from "next-auth/react";

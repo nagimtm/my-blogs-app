@@ -3,7 +3,7 @@ import classes from "./page.module.css";
 import Card from "@/components/blogCard/Card";
 
 export async function fetchBlogs() {
-  const res = await fetch("/api/blog", {
+  const res = await fetch("http://localhost:3000/api/blog", {
     cache: "no-store",
   });
 
@@ -12,6 +12,7 @@ export async function fetchBlogs() {
 
 export default async function Home() {
   const blogs = await fetchBlogs();
+  console.log("blogs", blogs);
   return (
     <div className={classes.container}>
       {blogs?.length > 0 && <h2>BlogsWebApp</h2>}
