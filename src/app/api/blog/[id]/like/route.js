@@ -1,6 +1,6 @@
-import db from "@/lib/db";
+import db from "@/db/dbConnect";
 import { verifyJwtToken } from "@/lib/jwt";
-import Blog from "@/models/Blog";
+import Blog from "@/db/models/Blog";
 
 export async function PUT(req, ctx) {
   await db.connect();

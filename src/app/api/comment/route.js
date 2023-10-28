@@ -1,6 +1,6 @@
-import db from "@/lib/db";
+import db from "@/db/dbConnect";
 import { verifyJwtToken } from "@/lib/jwt";
-import Comment from "@/models/Comment";
+import Comment from "@/db/models/Comment";
 
 export async function POST(req) {
   await db.connect();
@@ -16,10 +16,8 @@ export async function POST(req) {
       { status: 403 }
     );
   }
-
   try {
     const body = await req.json();
-    console.log("log your comment backend body", body);
 
     let newComment = await Comment.create(body);
     newComment = await newComment.populate("authorId");

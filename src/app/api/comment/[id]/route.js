@@ -1,12 +1,11 @@
-import db from "@/lib/db";
+import db from "@/db/dbConnect";
 import { verifyJwtToken } from "@/lib/jwt";
-import Comment from "@/models/Comment";
+import Comment from "@/db/models/Comment";
 
 export async function GET(req, ctx) {
   await db.connect();
 
   const id = ctx.params.id;
-  // console.log("comment id", id);
 
   try {
     const comments = await Comment?.find({ blogId: id }).populate("authorId");
@@ -17,11 +16,12 @@ export async function GET(req, ctx) {
   }
 }
 
-export async function DELETE() {
+export async function DELETE(req, ctx) {
   await db.connect();
 
-  const id = ctx.params.id;
-  const accessToken = req.header.get("authorization");
+  const id = ctx?.params?.id;
+  const accessToken = req.headers.get("authorization");
+
   const token = accessToken.split(" ")[1];
 
   const decodedToken = verifyJwtToken(token);
