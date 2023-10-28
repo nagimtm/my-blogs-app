@@ -12,7 +12,6 @@ export async function fetchBlogs() {
 
 export default async function Home() {
   const blogs = await fetchBlogs();
-  console.log("blogs", blogs);
   return (
     <div className={classes.container}>
       {blogs?.length > 0 && <h2>BlogsWebApp</h2>}
