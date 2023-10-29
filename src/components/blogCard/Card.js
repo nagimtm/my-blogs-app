@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import classes from "./card.module.css";
 import { useSession } from "next-auth/react";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
-// import useSWR from "swr";
 
 const Card = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => {
   const { data: session } = useSession();

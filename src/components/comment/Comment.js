@@ -1,7 +1,7 @@
 import React from "react";
 import { useSession } from "next-auth/react";
 import { format } from "timeago.js";
-import ice from "../../../../Blog/blog-app/public/ice-cream.jpg";
+import ice from "../../../public/ice-cream.jpg";
 import { BsTrash } from "react-icons/bs";
 import classes from "./comment.module.css";
 import Image from "next/image";
@@ -30,7 +30,7 @@ const Comment = ({ comment, setComments }) => {
     <div className={classes.container}>
       <div className={classes.section}>
         <div className={classes.left}>
-          {/* <Image src={ice} width="45" height="45" alt="" /> */}
+          <Image src={ice} width="45" height="45" alt="" />
           <div className={classes.userData}>
             <h4>{comment?.authorId?.username}</h4>
             <span className={classes.timeago}>
