@@ -19,7 +19,10 @@ const Navbar = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <h2 className={classes.left}>
-          {/* <Link href={"/"}>Main Page</Link> */}
+          <Link href={"/"}>Home</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/blog"}>Blogs</Link>
+          <Link href={"/contact"}>Contact</Link>
         </h2>
         <ul className={classes.right}>
           {session?.user ? (

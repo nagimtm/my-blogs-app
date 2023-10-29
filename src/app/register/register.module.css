@@ -38,7 +38,6 @@
   margin-top: 20px;
   border-bottom: 1px solid #666;
   padding: 0.5rem;
-  /* box-shadow: 2px 5px 27px -8px rgb(15, 141, 225); */
 }
 
 .submitButton {
@@ -50,7 +49,7 @@
   font-size: 17px;
   font-weight: bold;
   background-color: #efefef;
-  color: #42cdc2; /*#22ab22;*/
+  color: #42cdc2;
   cursor: pointer;
   transition: 150ms;
   letter-spacing: 0.5px;
@@ -59,8 +58,8 @@
 }
 
 .submitButton:hover {
-  border-color: #42cdc2; /* #22ab22;*/
-  background-color: #42cdc2; /* #22ab22;*/
+  border-color: #42cdc2;
+  background-color: #42cdc2;
   color: #efefef;
 }
 

@@ -14,10 +14,12 @@ export default async function Home() {
   const blogs = await fetchBlogs();
   return (
     <div className={classes.container}>
-      {blogs?.length > 0 && <h2>BlogsWebApp</h2>}
+      {blogs?.length > 0 && <h2>Blogs Web App</h2>}
       <div className={classes.section}>
         {blogs?.length > 0 ? (
-          blogs.map((blog) => <Card key={blog._id} blog={blog} />)
+          blogs.map((blog) => (
+            <Card className={classes.sectionImg} key={blog._id} blog={blog} />
+          ))
         ) : (
           <h3 className={classes.noBlogs}>No blogs are currently in the</h3>
         )}
