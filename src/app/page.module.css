@@ -1,21 +1,41 @@
 .container {
   min-height: calc(100vh - 60px);
-  width: 100%;
+  width: 90%;
 }
 
 .section {
-  height: 100%;
-  width: 85%;
+  height: 90%;
+  width: 90%;
   margin: 0 auto;
+  margin-left: 10%;
   margin-top: 2.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 7.5rem;
+  gap: 8rem;
 }
 
 .container > h2 {
   text-align: center;
-  color: #333;
-  margin-top: 1.5rem;
+  justify-content: center;
+  color: #42cdc2;
+  /* color: #fff; */
+  margin-left: 1%;
+  margin-top: 2.5rem;
   font-size: 32px;
+  /* border: 2px solid #42cdc2; */
+  border: none;
+  /* width: 98%; */
+  height: 3rem;
+  /* border-radius: 12px;
+  box-shadow: 2px 5px 27px -8px rgb(76, 103, 224); */
 }
+
+.section > div > div > a > img {
+  box-shadow: 2px 5px 27px -8px rgb(76, 103, 224);
+  border-radius: 12px;
+}
+
+/* .section > div > div > div > div:nth-child(2) {
+  margin-left: 80%;
+  margin-top: -1.5rem;
+} */

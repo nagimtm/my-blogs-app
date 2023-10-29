@@ -21,6 +21,7 @@
 .wrapper > form {
   margin-top: 3rem;
   width: 35%;
+  margin-top: 20px;
   padding: 1.5rem;
   border: 1px solid #666;
   border-radius: 8px;
@@ -46,19 +47,21 @@
   border: none;
   margin-top: 20px;
   padding: 0.5rem 1rem;
-  border: 1px solid transparent;
+  border: 1px solid #42cdc2;
   font-size: 17px;
   font-weight: bold;
-  background-color: #efefef;
-  color: #42cdc2; /*#22ab22;*/
+  background-color: #fff;
+  color: #42cdc2;
   cursor: pointer;
   transition: 150ms;
   letter-spacing: 0.5px;
+  border-radius: 12px;
+  box-shadow: 2px 5px 27px -8px rgb(15, 141, 225);
 }
 
 .submitButton:hover {
-  border-color: #42cdc2; /*#22ab22;*/
-  background-color: #42cdc2; /*#22ab22;*/
+  border-color: #42cdc2;
+  background-color: #42cdc2;
   color: #efefef;
 }
 

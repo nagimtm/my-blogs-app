@@ -13,6 +13,7 @@
   top: 0;
   left: 0;
   border-radius: 12px;
+  border: 2px solid #42cdc2;
 }
 
 .wrapper {
@@ -24,15 +25,14 @@
   position: relative;
 }
 
-/* .left {
+.left {
+  display: flex;
+  font-size: 1.5rem;
   border: none;
-  font-size: 36px;
-  color: rgb(242, 51, 117);
-  background-color: rgb(26, 180, 26);
-  box-shadow: 2px 5px 27px -8px rgb(76, 103, 224);
-  color: #fff;
+  color: #333;
   border-radius: 12px;
-} */
+  gap: 5rem;
+}
 
 .right {
   display: flex;
