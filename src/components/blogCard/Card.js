@@ -43,7 +43,7 @@ const Card = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.wrapper}>
+      <div className={classes.section}>
         <Link className={classes.imgContainer} href={`/blog/${_id}`}>
           <Image src={imageUrl} width="350" height="350" alt="blog-img" />
         </Link>
@@ -51,9 +51,6 @@ const Card = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => {
           <div className={classes.left}>
             <h3>{title}</h3>
             <p>{desc}</p>
-            {/* <span>
-              Created By: <span>1th of January</span>
-            </span> */}
           </div>
           <div className={classes.right}>
             {blogLikes}{" "}

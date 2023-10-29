@@ -202,7 +202,7 @@ const BlogDetails = (ctx) => {
                 />
               ))
             ) : (
-              <h4 className={classes.noComments}>No comments.</h4>
+              <h4 className={classes.noComments}>No comment.</h4>
             )}
           </div>
         </div>
