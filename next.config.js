@@ -16,7 +16,9 @@ const nextConfig = {
     config.experiments = {
       ...config.experiments,
       topLevelAwait: true,
+      webpackBuildWorker: true,
     };
+
     return config;
   },
 };
