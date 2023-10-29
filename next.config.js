@@ -1,10 +1,8 @@
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
 
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: false,
     serverComponentsExternalPackages: ["mongoose"],
   },
   images: {
@@ -16,9 +14,7 @@ const nextConfig = {
     config.experiments = {
       ...config.experiments,
       topLevelAwait: true,
-      webpackBuildWorker: true,
     };
-
     return config;
   },
 };
