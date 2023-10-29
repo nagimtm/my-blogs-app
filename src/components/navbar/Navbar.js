@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <h2 className={classes.left}>
-          <Link href={"/"}>My Blog</Link>
+          {/* <Link href={"/"}>Main Page</Link> */}
         </h2>
         <ul className={classes.right}>
           {session?.user ? (
@@ -50,7 +50,7 @@ const Navbar = () => {
                     href={"/create-blog"}
                     className={classes.create}
                   >
-                    Create
+                    Create Blog
                   </Link>
                 </div>
               )}
@@ -65,7 +65,7 @@ const Navbar = () => {
               >
                 Log in
               </button>
-              <Link href={"/register"}>Sign Up</Link>
+              <Link href={"/register"}>Sign up</Link>
             </>
           )}
         </ul>

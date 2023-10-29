@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <div className={classes.container}>
       {blogs?.length > 0 && <h2>BlogsWebApp</h2>}
-      <div className={classes.wrapper}>
+      <div className={classes.section}>
         {blogs?.length > 0 ? (
           blogs.map((blog) => <Card key={blog._id} blog={blog} />)
         ) : (

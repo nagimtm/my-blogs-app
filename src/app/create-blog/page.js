@@ -6,7 +6,7 @@ import { AiOutlineFileImage } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSession } from "next-auth/react";
-import classes from "./creeateBlog.module.css";
+import classes from "./createBlog.module.css";
 
 const CreateBlog = () => {
   const CLOUD_NAME = "dijpnfuug";

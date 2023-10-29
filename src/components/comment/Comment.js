@@ -8,7 +8,6 @@ import Image from "next/image";
 
 const Comment = ({ comment, setComments }) => {
   const { data: session } = useSession();
-  // const token = session?.user?.accessToken;
 
   const handleDeleteComment = async () => {
     try {
@@ -29,9 +28,9 @@ const Comment = ({ comment, setComments }) => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.wrapper}>
+      <div className={classes.section}>
         <div className={classes.left}>
-          <Image src={ice} width="45" height="45" alt="" />
+          {/* <Image src={ice} width="45" height="45" alt="" /> */}
           <div className={classes.userData}>
             <h4>{comment?.authorId?.username}</h4>
             <span className={classes.timeago}>
