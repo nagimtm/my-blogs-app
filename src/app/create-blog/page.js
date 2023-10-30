@@ -39,7 +39,7 @@ const CreateBlog = () => {
     try {
       const imageUrl = await uploadImage();
 
-      const res = await fetch(`/api/blog`, {
+      const res = await fetch(`https://my-blogs-app-vert.vercel.app/api/blog`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${session?.user?.accessToken}`,
@@ -60,7 +60,7 @@ const CreateBlog = () => {
 
       const blog = await res.json();
 
-      router.push(`/blog/${blog?._id}`);
+      router.push(`https://my-blogs-app-vert.vercel.app/blog/${blog?._id}`);
     } catch (error) {
       console.log(error);
     }

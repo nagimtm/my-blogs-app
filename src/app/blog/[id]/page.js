@@ -62,12 +62,15 @@ const BlogDetails = (ctx) => {
       );
 
       if (confirmModal) {
-        const res = await fetch(`/api/blog/${id}`, {
-          headers: {
-            Authorization: `Bearer ${session?.user?.accessToken}`,
-          },
-          method: "DELETE",
-        });
+        const res = await fetch(
+          `https://my-blogs-app-vert.vercel.app//api/blog/${id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${session?.user?.accessToken}`,
+            },
+            method: "DELETE",
+          }
+        );
 
         if (res.ok) {
           router.push("/");
@@ -80,12 +83,15 @@ const BlogDetails = (ctx) => {
 
   const handleLike = async () => {
     try {
-      const res = await fetch(`/api/blog/${id}/like`, {
-        headers: {
-          Authorization: `Bearer ${session?.user?.accessToken}`,
-        },
-        method: "PUT",
-      });
+      const res = await fetch(
+        `https://my-blogs-app-vert.vercel.app//api/blog/${id}/like`,
+        {
+          headers: {
+            Authorization: `Bearer ${session?.user?.accessToken}`,
+          },
+          method: "PUT",
+        }
+      );
 
       if (res.ok) {
         if (isLiked) {
@@ -108,18 +114,21 @@ const BlogDetails = (ctx) => {
     }
 
     try {
-      const res = await fetch("/api/comment", {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${session?.user?.accessToken}`,
-        },
-        method: "POST",
-        body: JSON.stringify({
-          blogId: ctx.params.id,
-          authorId: session?.user?._id,
-          text: commentText,
-        }),
-      });
+      const res = await fetch(
+        "https://my-blogs-app-vert.vercel.app//api/comment",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${session?.user?.accessToken}`,
+          },
+          method: "POST",
+          body: JSON.stringify({
+            blogId: ctx.params.id,
+            authorId: session?.user?._id,
+            text: commentText,
+          }),
+        }
+      );
 
       const newComment = await res.json();
 

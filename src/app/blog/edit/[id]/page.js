@@ -22,7 +22,9 @@ const Edit = (ctx) => {
 
   useEffect(() => {
     async function fetchBlog() {
-      const res = await fetch(`/api/blog/${id}`);
+      const res = await fetch(
+        `https://my-blogs-app-vert.vercel.app//api/blog/${id}`
+      );
 
       const blog = await res.json();
 

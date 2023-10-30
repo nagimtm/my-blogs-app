@@ -25,15 +25,18 @@ const Register = () => {
     }
 
     try {
-      const res = await fetch("/api/register", {
-        mode: "no-cors",
-        cache: "no-cache",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({ username, email, password }),
-      });
+      const res = await fetch(
+        "https://my-blogs-app-vert.vercel.app/api/register",
+        {
+          mode: "no-cors",
+          cache: "no-cache",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify({ username, email, password }),
+        }
+      );
 
       console.log(await res?.json());
       if (res.ok) {

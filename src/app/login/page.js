@@ -33,7 +33,7 @@ const Login = () => {
       });
 
       if (res?.error == null) {
-        router.push("/");
+        router.push("https://my-blogs-app-vert.vercel.app");
       } else {
         toast.error("Error occured while logging");
       }

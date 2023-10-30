@@ -4,7 +4,7 @@ import Card from "@/components/blogCard/Card";
 
 export async function fetchBlogs() {
   try {
-    const res = await fetch("http://localhost:3000/api/blog", {
+    const res = await fetch("https://my-blogs-app-vert.vercel.app/api/blog", {
       cache: "no-store",
     });
 
