@@ -3,11 +3,15 @@ import classes from "./page.module.css";
 import Card from "@/components/blogCard/Card";
 
 export async function fetchBlogs() {
-  const res = await fetch("/api/blog", {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch("/api/blog", {
+      cache: "no-store",
+    });
 
-  return res.json();
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default async function Home() {
