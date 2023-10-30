@@ -14,7 +14,7 @@ import Comment from "@/components/comment/Comment";
 import ice from "../../../../public/ice-cream.jpg";
 
 const BlogDetails = (ctx) => {
-  const [blogDetails, setBlogDetails] = useState("");
+  const [blogDetails, setBlogDetails] = useState([]);
   const [isLiked, setIsLiked] = useState(false);
   const [blogLikes, setBlogLikes] = useState(0);
 
@@ -47,8 +47,9 @@ const BlogDetails = (ctx) => {
         cache: "no-store",
       });
       const blog = await res.json();
+      console.log("RESPONSE, blog", blog);
 
-      setBlogDetails(blog);
+      setBlogDetails([blog]);
       setIsLiked(blog?.likes?.includes(session?.user?._id));
       setBlogLikes(blog?.likes?.length || 0);
     }
@@ -146,15 +147,14 @@ const BlogDetails = (ctx) => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <Image
-          src={blogDetails?.imageUrl}
+          src={blogDetails[0]?.imageUrl}
           width="500"
           height="500"
           alt="blog_img"
         />
         <div className={classes.row}>
-          <h3 className={classes.title}>{blogDetails?.title}</h3>
-          {blogDetails?.authorId?._id.toString() ===
-          session?.user?._id.toString() ? (
+          <h3 className={classes.title}>{blogDetails[0]?.title}</h3>
+          {blogDetails[0]?.authorId?._id.toString() === session ? (
             <div className={classes.controls}>
               <Link className={classes.editButton} href={`/blog/edit/${id}`}>
                 Edit <BsFillPencilFill />
@@ -166,14 +166,14 @@ const BlogDetails = (ctx) => {
             </div>
           ) : (
             <div className={classes.author}>
-              Author: <span>{blogDetails?.authorId}</span>
+              Author: <span>{blogDetails[0]?.authorId?.username}</span>
             </div>
           )}
         </div>
         <div className={classes.row}>
           <div className={classes.category}>
             Category:
-            <span>{blogDetails?.category}</span>
+            <span>{blogDetails[0]?.category}</span>
           </div>
           <div className={classes.right}>
             {blogLikes}{" "}
@@ -185,9 +185,9 @@ const BlogDetails = (ctx) => {
           </div>
         </div>
         <div className={classes.row}>
-          <p>{blogDetails?.desc}</p>
+          <p>{blogDetails[0]?.desc}</p>
           <span>
-            Posted: <span>{format(blogDetails?.createdAt)}</span>
+            Posted: <span>{format(blogDetails[0]?.createdAt)}</span>
           </span>
         </div>
         <div className={classes.commentSection}>

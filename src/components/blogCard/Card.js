@@ -43,7 +43,10 @@ const Card = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => {
   return (
     <div className={classes.container}>
       <div className={classes.section}>
-        <Link className={classes.imgContainer} href={`/blog/${_id}`}>
+        <Link
+          className={classes.imgContainer}
+          href={session ? `/blog/${_id}` : "/"}
+        >
           <Image src={imageUrl} width="350" height="350" alt="blog-img" />
         </Link>
         <div className={classes.blogData}>
