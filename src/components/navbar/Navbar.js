@@ -19,10 +19,10 @@ const Navbar = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <h2 className={classes.left}>
-          <Link href={"/"}>Home</Link>
-          <Link href={"/"}>About</Link>
-          <Link href={"/"}>Blogs</Link>
-          <Link href={"/"}>Contact</Link>
+          <Link href={"https://my-blogs-app-vert.vercel.app/"}>Home</Link>
+          <Link href={"https://my-blogs-app-vert.vercel.app/"}>About</Link>
+          <Link href={"https://my-blogs-app-vert.vercel.app/"}>Blogs</Link>
+          <Link href={"https://my-blogs-app-vert.vercel.app/"}>Contact</Link>
         </h2>
         <ul className={classes.right}>
           {session?.user ? (
