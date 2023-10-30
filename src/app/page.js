@@ -3,7 +3,7 @@ import classes from "./page.module.css";
 import Card from "@/components/blogCard/Card";
 
 export async function fetchBlogs() {
-  const res = await fetch("http://localhost:3000/api/blog", {
+  const res = await fetch("/api/blog", {
     cache: "no-store",
   });
 
