@@ -20,9 +20,9 @@ const Navbar = () => {
       <div className={classes.wrapper}>
         <h2 className={classes.left}>
           <Link href={"/"}>Home</Link>
-          <Link href={"/about"}>About</Link>
-          <Link href={"/blog"}>Blogs</Link>
-          <Link href={"/contact"}>Contact</Link>
+          {/* <Link href={"/"}>About</Link>
+          <Link href={"/"}>Blogs</Link>
+          <Link href={"/"}>Contact</Link> */}
         </h2>
         <ul className={classes.right}>
           {session?.user ? (
