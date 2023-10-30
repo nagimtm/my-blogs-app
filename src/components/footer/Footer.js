@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./footer.module.css";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={classes.footer}>
@@ -17,8 +18,13 @@ const Footer = () => {
         <div className={classes.col}>
           <h2>Contacts</h2>
           <span>Phone: +49123456789</span>
-          <span>YouTube: https://my-blogs-app-vert.vercel.app/</span>
-          <span>GitHub: https://github.com/nagimtm</span>
+          <span>
+            YouTube:{" "}
+            <Link href={"https://www.youtube.com/@QuantumTech"}>
+              https://www.youtube.com/@QuantumTech
+            </Link>
+          </span>
+          <span>GitHub: <Link href={https://github.com/nagimtm}>https://github.com/nagimtm</Link></span>
         </div>
         <div className={classes.col}>
           <h2>Location</h2>
