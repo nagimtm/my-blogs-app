@@ -4,7 +4,7 @@ import Card from "@/components/blogCard/Card";
 
 export async function fetchBlogs() {
   try {
-    const res = await fetch("/api/blog", {
+    const res = await fetch("http://127.0.0.1:3000/api/blog", {
       cache: "no-store",
     });
 
