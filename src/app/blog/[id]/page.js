@@ -35,7 +35,7 @@ const BlogDetails = (ctx) => {
       setComments(comments);
     }
     fetchComments();
-  }, [session]);
+  }, [session, id]);
 
   useEffect(() => {
     async function fetchBlog() {
@@ -53,7 +53,7 @@ const BlogDetails = (ctx) => {
       setBlogLikes(blog?.likes?.length || 0);
     }
     session && fetchBlog();
-  }, [session]);
+  }, [session, id]);
 
   const handleDelete = async () => {
     try {

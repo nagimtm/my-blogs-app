@@ -31,7 +31,7 @@ const Edit = (ctx) => {
       setCategory(blog.category);
     }
     fetchBlog();
-  }, [session]);
+  }, [session, id]);
 
   if (status === "loading") {
     return <p>Loading...</p>;

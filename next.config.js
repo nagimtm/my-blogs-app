@@ -2,13 +2,8 @@
 
 const nextConfig = {
   experimental: {
-    appDir: false,
+    // appDir: true,
     serverComponentsExternalPackages: ["mongoose"],
-  },
-  images: {
-    remotePatterns: [
-      { hostname: "res.cloudinary.com", protocol: "https", port: "" },
-    ],
   },
   webpack(config) {
     config.experiments = {
@@ -16,6 +11,11 @@ const nextConfig = {
       topLevelAwait: true,
     };
     return config;
+  },
+  images: {
+    remotePatterns: [
+      { hostname: "res.cloudinary.com", protocol: "https", port: "" },
+    ],
   },
 };
 
